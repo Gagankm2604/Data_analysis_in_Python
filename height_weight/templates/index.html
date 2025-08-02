@@ -1,0 +1,19 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Height Predictor</title>
+</head>
+<body>
+    <h2>Height Prediction from Weight</h2>
+    <form method="POST" action="/predict">
+        <label>Enter Weight (kg):</label>
+        <input type="number" name="weight" required>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
